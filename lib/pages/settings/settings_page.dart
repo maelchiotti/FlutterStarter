@@ -4,7 +4,6 @@ import 'package:go_router/go_router.dart';
 import 'package:locale_names/locale_names.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:simple_icons/simple_icons.dart';
-import 'package:starter/pages/settings/about.dart';
 import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/extensions/string_extensions.dart';
 import 'package:starter/utils/locale_manager.dart';
@@ -78,6 +77,10 @@ class SettingsPage extends StatelessWidget {
     launchUrlString('https://github.com/maelchiotti/flutter_starter');
   }
 
+  void _openLicense(_) {
+    launchUrlString('https://opensource.org/license/mit/');
+  }
+
   @override
   Widget build(BuildContext context) {
     return SettingsList(
@@ -111,13 +114,19 @@ class SettingsPage extends StatelessWidget {
             SettingsTile(
               leading: const Icon(Icons.info),
               title: Text(PackageInfoManager().name),
-              value: const About(),
+              value: Text(PackageInfoManager().version),
             ),
             SettingsTile(
               leading: const Icon(SimpleIcons.github),
               title: Text('GitHub'),
               value: Text('Take a look at the source code'),
               onPressed: _openGitHub,
+            ),
+            SettingsTile(
+              leading: const Icon(Icons.balance),
+              title: Text('License'),
+              value: Text('MIT'),
+              onPressed: _openLicense,
             ),
           ],
         ),
