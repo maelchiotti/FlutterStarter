@@ -27,3 +27,7 @@ A ready-to-use Flutter project for Android and iOS.
 - Splash screen ([flutter_native_splash](https://pub.dev/packages/flutter_native_splash))
 - Launcher icons ([icons_launcher](https://pub.dev/packages/icons_launcher))
 - Production-ready linting ([lint](https://pub.dev/packages/lint))
+
+## Disclaimer
+
+This package is opinionated. Therefore, main packages will not change (`go_router`, `riverpod`, `lint`, etc.), unless they become deprecated, obsolete, or there is an obviously better alternative. If you prefer to use other packages, feel free to modify the code, either locally to fit your needs of by [forking](https://github.com/maelchiotti/flutter_starter/fork) this repository.
