@@ -4,7 +4,7 @@ import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/preferences/preference_key.dart';
 import 'package:starter/utils/preferences/preferences_manager.dart';
 
-class Themes {
+class ThemeManager {
   final _defaultLight = ColorScheme.fromSeed(
     seedColor: Colors.teal,
   );
@@ -15,7 +15,7 @@ class Themes {
   );
 
   ThemeMode get themeMode {
-    final themeModePreference = PreferencesManager().get<int>(PreferenceKey.theme.key);
+    final themeModePreference = PreferencesManager().get<int>(PreferenceKey.theme);
 
     if (themeModePreference != null) {
       switch (themeModePreference) {
@@ -43,7 +43,7 @@ class Themes {
       case ThemeMode.dark:
         value = 2;
     }
-    PreferencesManager().set(PreferenceKey.theme.key, value);
+    PreferencesManager().set<int>(PreferenceKey.theme.key, value);
 
     themeModeNotifier.value = themeMode;
   }

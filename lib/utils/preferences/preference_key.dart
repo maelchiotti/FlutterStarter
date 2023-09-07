@@ -1,4 +1,5 @@
 enum PreferenceKey {
+  locale('locale'),
   theme('theme'),
   ;
 

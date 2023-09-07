@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:starter/utils/themes.dart';
+import 'package:starter/utils/locale_manager.dart';
+import 'package:starter/utils/theme_manager.dart';
 
-final themeModeNotifier = ValueNotifier<ThemeMode>(Themes().themeMode);
+final localeNotifier = ValueNotifier<Locale>(LocaleManager().locale);
+final themeModeNotifier = ValueNotifier<ThemeMode>(ThemeManager().themeMode);
 
 final navigatorKey = GlobalKey<NavigatorState>(debugLabel: 'Root navigator key');
 

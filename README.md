@@ -11,10 +11,10 @@ A ready-to-use Flutter project for Android and iOS.
 - Bottom navigation
 - Routing ([go_router](https://pub.dev/packages/go_router))
 - State management ([riverpod](https://pub.dev/packages/flutter_riverpod))
-- Preferences manager (using [shared_preferences](https://pub.dev/packages/shared_preferences))
-- Package info manager (using [package_info_plus](https://pub.dev/packages/package_info_plus))
-- Localization ([i18n](https://docs.flutter.dev/ui/accessibility-and-localization/internationalization)
-  and [locale_names](https://pub.dev/packages/locale_names))
+- Preferences wrapper (using [shared_preferences](https://pub.dev/packages/shared_preferences))
+- Package info wrapper (using [package_info_plus](https://pub.dev/packages/package_info_plus))
+- Localization ([i18n](https://docs.flutter.dev/ui/accessibility-and-localization/internationalization)) with locale
+  wrapper
 - Dynamic system, light and dark themes ([dynamic_color](https://pub.dev/packages/dynamic_color))
 - Constants stored in enumerations (sizes, paddings, radiuses and separators)
 - Splash screen ([flutter_native_splash](https://pub.dev/packages/flutter_native_splash))

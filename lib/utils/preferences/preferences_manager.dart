@@ -1,4 +1,5 @@
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:starter/utils/preferences/preference_key.dart';
 
 class PreferencesManager {
   static final PreferencesManager _singleton = PreferencesManager._internal();
@@ -16,6 +17,8 @@ class PreferencesManager {
   }
 
   void set<T>(String key, T value) {
+    if (T == dynamic) throw ArgumentError('The type T is required.');
+
     if (T == bool) {
       _preferences.setBool(key, value as bool);
     } else if (T == int) {
@@ -29,7 +32,9 @@ class PreferencesManager {
     }
   }
 
-  T? get<T>(String key) {
-    return _preferences.get(key) as T?;
+  T? get<T>(PreferenceKey key) {
+    if (T == dynamic) throw ArgumentError('The type T is required.');
+
+    return _preferences.get(key.name) as T?;
   }
 }
