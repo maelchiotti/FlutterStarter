@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
+import 'package:locale_names/locale_names.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:starter/pages/settings/about.dart';
-import 'package:starter/utils/themes/themes.dart';
+import 'package:starter/utils/constants/constants.dart';
+import 'package:starter/utils/extensions/string_extensions.dart';
+import 'package:starter/utils/themes.dart';
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage();
@@ -12,24 +16,24 @@ class SettingsPage extends StatelessWidget {
       context: context,
       builder: (context) {
         return SimpleDialog(
-          title: Text('Theme'),
+          title: Text(localizations.settings_theme),
           children: [
             ListTile(
-              leading: Icon(Icons.smartphone),
+              leading: const Icon(Icons.smartphone),
               title: Text('System'),
               onTap: () {
                 context.pop(ThemeMode.system);
               },
             ),
             ListTile(
-              leading: Icon(Icons.light_mode),
+              leading: const Icon(Icons.light_mode),
               title: Text('Light'),
               onTap: () {
                 context.pop(ThemeMode.light);
               },
             ),
             ListTile(
-              leading: Icon(Icons.dark_mode),
+              leading: const Icon(Icons.dark_mode),
               title: Text('Dark'),
               onTap: () {
                 context.pop(ThemeMode.dark);
@@ -49,16 +53,12 @@ class SettingsPage extends StatelessWidget {
       builder: (context) {
         return SimpleDialog(
           title: Text('Theme'),
-          children: [
-            ListTile(
-              title: Text('English'),
+          children: AppLocalizations.supportedLocales.map((locale) {
+            return ListTile(
+              title: Text(locale.nativeDisplayLanguage),
               onTap: () {},
-            ),
-            ListTile(
-              title: Text('French'),
-              onTap: () {},
-            ),
-          ],
+            );
+          }).toList(),
         );
       },
     );
@@ -81,15 +81,15 @@ class SettingsPage extends StatelessWidget {
                 title: Text('Appearance'),
                 tiles: [
                   SettingsTile.navigation(
-                    leading: Icon(Icons.color_lens),
+                    leading: const Icon(Icons.palette),
                     title: Text('Theme'),
-                    value: Text('Light'),
+                    value: Text(Themes().themeMode.name.capitalized),
                     onPressed: _selectTheme,
                   ),
                   SettingsTile.navigation(
-                    leading: Icon(Icons.language),
+                    leading: const Icon(Icons.language),
                     title: Text('Language'),
-                    value: Text('English'),
+                    value: Text(Localizations.localeOf(context).nativeDisplayLanguage),
                     onPressed: _selectLanguage,
                   ),
                 ],

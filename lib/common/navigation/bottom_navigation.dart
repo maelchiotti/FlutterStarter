@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:starter/routes/router_route.dart';
+import 'package:starter/utils/routes/router_route.dart';
 
 class BottomNavigation extends StatefulWidget {
   const BottomNavigation();
-  
+
   @override
   State<BottomNavigation> createState() => _BottomNavigationState();
 }
