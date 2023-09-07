@@ -8,16 +8,20 @@ environment:
   sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
-  adaptive_theme: ^3.4.0
+  dynamic_color: ^1.6.6
   flutter:
     sdk: flutter
   flutter_hooks:
+  flutter_localizations:
+    sdk: flutter
   flutter_native_splash: ^2.3.2
   go_router: ^10.1.2
   hooks_riverpod: ^2.4.0
   icons_launcher: ^2.1.3
+  intl: ^0.18.1
   package_info_plus: ^4.1.0
   riverpod_annotation: ^2.1.5
+  settings_ui: ^2.0.2
   shared_preferences: ^2.2.1
 
 dev_dependencies:
@@ -31,3 +35,4 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true

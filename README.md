@@ -14,7 +14,7 @@ A ready-to-use Flutter project for Android and iOS.
 - Preferences manager (using [shared_preferences](https://pub.dev/packages/shared_preferences))
 - Package info manager (using [package_info_plus](https://pub.dev/packages/package_info_plus))
 - Localization ([i18n](https://docs.flutter.dev/ui/accessibility-and-localization/internationalization))
-- System, light and dark themes ([adaptive_theme](https://pub.dev/packages/adaptive_theme))
+- Dynamic system, light and dark themes ([dynamic_color](https://pub.dev/packages/dynamic_color))
 - Constants stored in enumerations (sizes, paddings, radiuses and separators)
 - Splash screen ([flutter_native_splash](https://pub.dev/packages/flutter_native_splash))
 - Launcher icons ([icons_launcher](https://pub.dev/packages/icons_launcher))

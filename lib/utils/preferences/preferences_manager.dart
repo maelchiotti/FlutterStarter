@@ -29,7 +29,7 @@ class PreferencesManager {
     }
   }
 
-  T get<T>(String key) {
-    return _preferences.get(key) as T;
+  T? get<T>(String key) {
+    return _preferences.get(key) as T?;
   }
 }
