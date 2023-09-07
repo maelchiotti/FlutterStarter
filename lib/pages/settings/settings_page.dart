@@ -20,6 +20,7 @@ class SettingsPage extends StatelessWidget {
       context: context,
       builder: (context) {
         return SimpleDialog(
+          clipBehavior: Clip.hardEdge,
           title: Text(localizations.settings_theme),
           children: [
             ListTile(
@@ -56,6 +57,7 @@ class SettingsPage extends StatelessWidget {
       context: context,
       builder: (context) {
         return SimpleDialog(
+          clipBehavior: Clip.hardEdge,
           title: Text('Theme'),
           children: AppLocalizations.supportedLocales.map((locale) {
             return ListTile(
