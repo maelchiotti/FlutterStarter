@@ -26,6 +26,7 @@ class App extends StatelessWidget {
                   supportedLocales: AppLocalizations.supportedLocales,
                   locale: locale,
                   routerConfig: router,
+                  debugShowCheckedModeBanner: false,
                 );
               },
             );

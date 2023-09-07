@@ -10,12 +10,12 @@ class BottomNavigation extends StatefulWidget {
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
-  int _currentIndex = 0;
+  int _selectedIndex = 0;
 
   void _onItemTapped(int? index) {
     if (index != null) {
       setState(() {
-        _currentIndex = index;
+        _selectedIndex = index;
       });
 
       switch (index) {
@@ -29,19 +29,20 @@ class _BottomNavigationState extends State<BottomNavigation> {
 
   @override
   Widget build(BuildContext context) {
-    return BottomNavigationBar(
-      items: const [
-        BottomNavigationBarItem(
+    return NavigationBar(
+      surfaceTintColor: Theme.of(context).colorScheme.primary,
+      destinations: const [
+        NavigationDestination(
           icon: Icon(Icons.home),
           label: 'Home',
         ),
-        BottomNavigationBarItem(
+        NavigationDestination(
           icon: Icon(Icons.settings),
           label: 'Settings',
         ),
       ],
-      currentIndex: _currentIndex,
-      onTap: _onItemTapped,
+      selectedIndex: _selectedIndex,
+      onDestinationSelected: _onItemTapped,
     );
   }
 }
