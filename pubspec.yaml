@@ -1,8 +1,14 @@
 name: starter
 description: A ready-to-use Flutter project for Android and iOS.
-publish_to: 'none'
+repository: https://github.com/maelchiotti/flutter_starter
+documentation: https://github.com/maelchiotti/flutter_starter/wiki
+topics:
+  - starter
+  - template
+  - ready-to-use
+  - project
 
-version: 1.0.0+1
+version: 1.0.0
 
 environment:
   sdk: '>=3.0.0 <4.0.0'
@@ -12,7 +18,7 @@ dependencies:
   dynamic_color: ^1.6.6
   flutter:
     sdk: flutter
-  flutter_hooks:
+  flutter_hooks: ^0.20.1
   flutter_localizations:
     sdk: flutter
   flutter_native_splash: ^2.3.2
