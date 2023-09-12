@@ -11,9 +11,14 @@ import 'package:starter/utils/package_info_manager.dart';
 import 'package:starter/utils/theme_manager.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
-class SettingsPage extends StatelessWidget {
+class SettingsPage extends StatefulWidget {
   const SettingsPage();
 
+  @override
+  State<SettingsPage> createState() => _SettingsPageState();
+}
+
+class _SettingsPageState extends State<SettingsPage> {
   void _selectTheme(BuildContext context) {
     showAdaptiveDialog<ThemeMode>(
       context: context,
@@ -48,6 +53,7 @@ class SettingsPage extends StatelessWidget {
       },
     ).then((themeMode) {
       ThemeManager().setThemeMode(themeMode);
+      setState(() {});
     });
   }
 
