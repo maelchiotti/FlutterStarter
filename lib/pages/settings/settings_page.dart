@@ -24,21 +24,21 @@ class SettingsPage extends StatelessWidget {
           children: [
             ListTile(
               leading: const Icon(Icons.smartphone),
-              title: Text('System'),
+              title: Text(localizations.settings_theme_system),
               onTap: () {
                 context.pop(ThemeMode.system);
               },
             ),
             ListTile(
               leading: const Icon(Icons.light_mode),
-              title: Text('Light'),
+              title: Text(localizations.settings_theme_light),
               onTap: () {
                 context.pop(ThemeMode.light);
               },
             ),
             ListTile(
               leading: const Icon(Icons.dark_mode),
-              title: Text('Dark'),
+              title: Text(localizations.settings_theme_dark),
               onTap: () {
                 context.pop(ThemeMode.dark);
               },
@@ -57,7 +57,7 @@ class SettingsPage extends StatelessWidget {
       builder: (context) {
         return SimpleDialog(
           clipBehavior: Clip.hardEdge,
-          title: Text('Theme'),
+          title: Text(localizations.settings_language),
           children: AppLocalizations.supportedLocales.map((locale) {
             return ListTile(
               title: Text(locale.nativeDisplayLanguage),
@@ -92,24 +92,24 @@ class SettingsPage extends StatelessWidget {
       ),
       sections: [
         SettingsSection(
-          title: Text('Appearance'),
+          title: Text(localizations.settings_appearance),
           tiles: [
             SettingsTile.navigation(
               leading: const Icon(Icons.palette),
-              title: Text('Theme'),
+              title: Text(localizations.settings_theme),
               value: Text(ThemeManager().themeMode.name.capitalized),
               onPressed: _selectTheme,
             ),
             SettingsTile.navigation(
               leading: const Icon(Icons.language),
-              title: Text('Language'),
+              title: Text(localizations.settings_language),
               value: Text(Localizations.localeOf(context).nativeDisplayLanguage),
               onPressed: _selectLanguage,
             ),
           ],
         ),
         SettingsSection(
-          title: Text('About'),
+          title: Text(localizations.settings_about),
           tiles: [
             SettingsTile(
               leading: const Icon(Icons.info),
@@ -118,14 +118,14 @@ class SettingsPage extends StatelessWidget {
             ),
             SettingsTile(
               leading: const Icon(SimpleIcons.github),
-              title: Text('GitHub'),
-              value: Text('Take a look at the source code'),
+              title: Text(localizations.settings_github),
+              value: Text(localizations.settings_github_description),
               onPressed: _openGitHub,
             ),
             SettingsTile(
               leading: const Icon(Icons.balance),
-              title: Text('License'),
-              value: Text('MIT'),
+              title: Text(localizations.settings_licence),
+              value: Text(localizations.settings_licence_description),
               onPressed: _openLicense,
             ),
           ],
