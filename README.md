@@ -20,7 +20,7 @@ This package is opinionated. Therefore, main packages will not change (`go_route
 
 - Folders and files structure
 - Settings page ([settings_ui](https://pub.dev/packages/settings_ui)) with app version
-- Bottom navigation
+- Adaptive bottom and top navigation
 - Routing ([go_router](https://pub.dev/packages/go_router))
 - State management ([riverpod](https://pub.dev/packages/flutter_riverpod))
 - Preferences manager (using [shared_preferences](https://pub.dev/packages/shared_preferences))

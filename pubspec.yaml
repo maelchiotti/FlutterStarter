@@ -8,6 +8,7 @@ environment:
   sdk: '>=3.0.0 <4.0.0'
 
 dependencies:
+  cupertino_icons: ^1.0.6
   dynamic_color: ^1.6.6
   flutter:
     sdk: flutter
