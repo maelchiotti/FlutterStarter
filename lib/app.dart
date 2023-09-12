@@ -1,6 +1,6 @@
 import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:starter/l10n/app_localizations.dart';
 import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/package_info_manager.dart';
 import 'package:starter/utils/routes/router.dart';
