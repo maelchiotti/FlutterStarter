@@ -18,6 +18,8 @@ This package is opinionated. Therefore, main packages will not change (`go_route
 
 ## Included
 
+For more details, please see the [wiki](https://github.com/maelchiotti/flutter_starter/wiki).
+
 - Folders and files structure
 - Settings page ([settings_ui](https://pub.dev/packages/settings_ui)) with app version
 - Adaptive bottom and top navigation
