@@ -25,8 +25,8 @@ For more details, please see the [wiki](https://github.com/maelchiotti/flutter_s
 - Adaptive bottom and top navigation
 - Routing ([go_router](https://pub.dev/packages/go_router))
 - State management ([riverpod](https://pub.dev/packages/flutter_riverpod))
-- Preferences manager (using [shared_preferences](https://pub.dev/packages/shared_preferences))
-- Package info manager (using [package_info_plus](https://pub.dev/packages/package_info_plus))
+- Preferences manager ([shared_preferences](https://pub.dev/packages/shared_preferences))
+- Package info manager ([package_info_plus](https://pub.dev/packages/package_info_plus))
 - Localization with locale manager ([i18n](https://docs.flutter.dev/ui/accessibility-and-localization/internationalization))
 - Dynamic system, light and dark themes with themes manager ([dynamic_color](https://pub.dev/packages/dynamic_color))
 - Constants stored in enumerations (sizes, paddings, radiuses and separators)
