@@ -1,10 +1,10 @@
 <div align="center">
   <a href="https://pub.dev/packages/lint">
-    <img src="https://img.shields.io/badge/Style-lint-4BC0F5.svg" alt="Lint" />
+    <img src="https://img.shields.io/badge/Style-lint-blue.svg?logo=dart" alt="Lint" />
   </a>
-  <img src="https://img.shields.io/badge/Platform-Android%20|%20iOS%20-blue.svg?logo=flutter" alt="Platforms" />
-  <a href="https://opensource.org/license/mit">
-    <img src="https://img.shields.io/github/license/mrrhak/icons_launcher?label=License&color=red&logo=Leanpub" alt="License" />
+  <img src="https://img.shields.io/badge/Platform-Android%20|%20iOS-blue.svg?logo=flutter" alt="Platforms" />
+  <a href="https://github.com/maelchiotti/flutter_starter/blob/main/LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT%20-blue.svg?logo=Leanpub&color=red" alt="License" />
   </a>
 </div>
 
