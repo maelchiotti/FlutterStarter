@@ -84,7 +84,7 @@ class _SettingsPageState extends State<SettingsPage> {
   }
 
   void _openLicense(_) {
-    launchUrlString('https://opensource.org/license/mit');
+    launchUrlString('https://github.com/maelchiotti/flutter_starter/blob/main/LICENSE');
   }
 
   @override
