@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'package:locale_names/locale_names.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:simple_icons/simple_icons.dart';
-import 'package:starter/l10n/app_localizations.dart';
+import 'package:starter/l10n/app_localizations.g.dart';
 import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/extensions/string_extensions.dart';
 import 'package:starter/utils/locale_manager.dart';

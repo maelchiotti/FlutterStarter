@@ -17,6 +17,7 @@ environment:
 dependencies:
   cupertino_icons: ^1.0.6
   dynamic_color: ^1.6.7
+  file_picker: ^5.5.0
   flutter:
     sdk: flutter
   flutter_hooks: ^0.20.1
