@@ -31,6 +31,7 @@ For more details, please see the [wiki](https://github.com/maelchiotti/flutter_s
 - Routing ([go_router](https://pub.dev/packages/go_router))
 - State management ([riverpod](https://pub.dev/packages/flutter_riverpod))
 - Models ([freezd](https://pub.dev/packages/freezed) and [json_serializable](https://pub.dev/packages/json_serializable))
+- Asset enum to quickly access asset files
 - Preferences manager ([shared_preferences](https://pub.dev/packages/shared_preferences))
 - Package info manager ([package_info_plus](https://pub.dev/packages/package_info_plus))
 - Platform manager ([Platform](https://api.flutter.dev/flutter/package-platform_platform/Platform-class.html), [kIsWeb](https://api.flutter.dev/flutter/foundation/kIsWeb-constant.html) and [defaultTargetPlatform](https://api.flutter.dev/flutter/foundation/defaultTargetPlatform.html))
