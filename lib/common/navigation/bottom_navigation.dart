@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/routes/router_route.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -35,32 +36,32 @@ class _BottomNavigationState extends State<BottomNavigation> {
     return Platform.isAndroid
         ? NavigationBar(
             surfaceTintColor: Theme.of(context).colorScheme.primary,
-            destinations: const [
+            destinations:  [
               NavigationDestination(
-                icon: Icon(Icons.home_outlined),
-                selectedIcon: Icon(Icons.home),
-                label: 'Home',
+                icon: const Icon(Icons.home_outlined),
+                selectedIcon: const Icon(Icons.home),
+                label: localizations.navigation_home,
               ),
               NavigationDestination(
-                icon: Icon(Icons.settings_outlined),
-                selectedIcon: Icon(Icons.settings),
-                label: 'Settings',
+                icon: const Icon(Icons.settings_outlined),
+                selectedIcon: const Icon(Icons.settings),
+                label: localizations.navigation_settings,
               ),
             ],
             selectedIndex: _selectedIndex,
             onDestinationSelected: _onDestinationSelected,
           )
         : CupertinoTabBar(
-            items: const [
+            items:  [
               BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.house),
-                activeIcon: Icon(CupertinoIcons.house_fill),
-                label: 'Home',
+                icon: const Icon(CupertinoIcons.house),
+                activeIcon: const Icon(CupertinoIcons.house_fill),
+                label: localizations.navigation_home,
               ),
               BottomNavigationBarItem(
-                icon: Icon(CupertinoIcons.settings),
-                activeIcon: Icon(CupertinoIcons.settings_solid),
-                label: 'Settings',
+                icon: const Icon(CupertinoIcons.settings),
+                activeIcon: const Icon(CupertinoIcons.settings_solid),
+                label: localizations.navigation_settings,
               ),
             ],
             currentIndex: _selectedIndex,

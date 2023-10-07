@@ -91,6 +91,18 @@ abstract class AppLocalizations {
     Locale('en')
   ];
 
+  /// No description provided for @navigation_home.
+  ///
+  /// In en, this message translates to:
+  /// **'Home'**
+  String get navigation_home;
+
+  /// No description provided for @navigation_settings.
+  ///
+  /// In en, this message translates to:
+  /// **'Settings'**
+  String get navigation_settings;
+
   /// No description provided for @settings_appearance.
   ///
   /// In en, this message translates to:
