@@ -8,7 +8,7 @@ class HomePage extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     return Center(
-      child: Text(ref.watch(starterProvider)),
+      child: Text(ref.watch(starterProvider).label),
     );
   }
 }
