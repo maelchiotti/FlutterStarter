@@ -66,7 +66,7 @@ class _SettingsPageState extends State<SettingsPage> {
           title: Text(localizations.settings_language),
           children: AppLocalizations.supportedLocales.map((locale) {
             return ListTile(
-              title: Text(locale.nativeDisplayLanguage),
+              title: Text(locale.nativeDisplayLanguage.capitalized),
               onTap: () {
                 context.pop(locale);
               },
@@ -109,7 +109,7 @@ class _SettingsPageState extends State<SettingsPage> {
             SettingsTile.navigation(
               leading: const Icon(Icons.language),
               title: Text(localizations.settings_language),
-              value: Text(Localizations.localeOf(context).nativeDisplayLanguage),
+              value: Text(Localizations.localeOf(context).nativeDisplayLanguage.capitalized),
               onPressed: _selectLanguage,
             ),
           ],
