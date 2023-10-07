@@ -6,11 +6,11 @@ part of 'starter_provider.dart';
 // RiverpodGenerator
 // **************************************************************************
 
-String _$starterHash() => r'cdd8d40f79816f866e11fff060bf35ff32200efa';
+String _$starterHash() => r'bd4b9faefc4eacfe755766b22c3aadae1bb29c2a';
 
 /// See also [starter].
 @ProviderFor(starter)
-final starterProvider = AutoDisposeProvider<String>.internal(
+final starterProvider = AutoDisposeProvider<StarterModel>.internal(
   starter,
   name: r'starterProvider',
   debugGetCreateSourceHash:
@@ -19,6 +19,6 @@ final starterProvider = AutoDisposeProvider<String>.internal(
   allTransitiveDependencies: null,
 );
 
-typedef StarterRef = AutoDisposeProviderRef<String>;
+typedef StarterRef = AutoDisposeProviderRef<StarterModel>;
 // ignore_for_file: type=lint
 // ignore_for_file: subtype_of_sealed_class, invalid_use_of_internal_member, invalid_use_of_visible_for_testing_member
