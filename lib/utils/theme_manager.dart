@@ -14,6 +14,10 @@ class ThemeManager {
     seedColor: Colors.teal,
   );
 
+  bool get isLight {
+    return Theme.of(navigatorKey.currentContext!).brightness == Brightness.light;
+  }
+
   ThemeMode get themeMode {
     final themeModePreference = PreferencesManager().get<int>(PreferenceKey.theme);
 

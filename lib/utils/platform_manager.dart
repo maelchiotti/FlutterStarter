@@ -11,7 +11,7 @@ class PlatformManager {
 
   PlatformManager._internal();
 
-  bool isMobile() {
+  bool get isMobile {
     if (kIsWeb) {
       return defaultTargetPlatform == TargetPlatform.android || defaultTargetPlatform == TargetPlatform.iOS;
     } else {
