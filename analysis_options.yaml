@@ -4,6 +4,5 @@ analyzer:
   exclude:
     - '**.g.dart'
     - '**.freezed.dart'
-    - 'app_localizations.dart'
   plugins:
     - custom_lint
