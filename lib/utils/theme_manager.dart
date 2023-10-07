@@ -35,6 +35,23 @@ class ThemeManager {
     return ThemeMode.system;
   }
 
+  String get themeModeName {
+    final themeModePreference = PreferencesManager().get<int>(PreferenceKey.theme);
+
+    if (themeModePreference != null) {
+      switch (themeModePreference) {
+        case 0:
+          return localizations.settings_theme_system;
+        case 1:
+          return localizations.settings_theme_light;
+        case 2:
+          return localizations.settings_theme_dark;
+      }
+    }
+
+    return localizations.settings_theme_system;
+  }
+
   void setThemeMode(ThemeMode? themeMode) {
     if (themeMode == null) return;
 

@@ -103,7 +103,7 @@ class _SettingsPageState extends State<SettingsPage> {
             SettingsTile.navigation(
               leading: const Icon(Icons.palette),
               title: Text(localizations.settings_theme),
-              value: Text(ThemeManager().themeMode.name.capitalized),
+              value: Text(ThemeManager().themeModeName),
               onPressed: _selectTheme,
             ),
             SettingsTile.navigation(
