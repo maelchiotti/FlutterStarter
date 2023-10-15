@@ -1,5 +1,5 @@
+# dart run icons_launcher:create
 icons_launcher:
-  # dart run icons_launcher:create
   image_path: "assets/logos/flutter_logo.png"
   platforms:
     android:
