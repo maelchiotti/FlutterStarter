@@ -1,8 +1,0 @@
-# dart run icons_launcher:create
-icons_launcher:
-  image_path: "assets/logos/flutter_logo.png"
-  platforms:
-    android:
-      enable: true
-    ios:
-      enable: true
