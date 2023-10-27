@@ -21,6 +21,7 @@ This package is opinionated. Therefore, main packages will not change (`go_route
 - Add instructions on how to change the name of the app and other information
 - Add an assets manager (and show the logo on the home page)
 - Improve the bottom navigation with an enumeration of the destinations
+- Improve locale changing (remove listenable and show snack bar)
 
 ## Included
 
