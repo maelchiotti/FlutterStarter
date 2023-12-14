@@ -4,7 +4,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:starter/common/navigation/bottom_navigation_destination.dart';
-import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/routes/router_route.dart';
 
 class BottomNavigation extends StatefulWidget {
