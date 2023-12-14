@@ -18,4 +18,12 @@ class PlatformManager {
       return Platform.isAndroid || Platform.isIOS;
     }
   }
+
+  bool get isWeb {
+    return kIsWeb;
+  }
+
+  bool get isAndroid {
+    return kIsWeb ? defaultTargetPlatform == TargetPlatform.android : Platform.isAndroid;
+  }
 }

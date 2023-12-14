@@ -19,8 +19,6 @@ This package is opinionated. Therefore, main packages will not change (`go_route
 ## Roadmap
 
 - Add instructions on how to change the name of the app and other information
-- Improve locale changing (remove listenable and show snack bar) and detect device locale
-- Improve the `PlatformManager` to check if the device is Android and use it everywhere instead of `Platform` (fix issue on mobile web) 
 
 ## Included
 

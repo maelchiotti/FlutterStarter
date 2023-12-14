@@ -29,6 +29,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings_language => 'Language';
 
   @override
+  String get settings_language_restart => 'Please restart the app for the changes to take effect.';
+
+  @override
   String get settings_about => 'About';
 
   @override

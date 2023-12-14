@@ -1,4 +1,7 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
+import 'package:starter/l10n/app_localizations.g.dart';
 import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/preferences/preference_key.dart';
 import 'package:starter/utils/preferences/preferences_manager.dart';
@@ -10,6 +13,13 @@ class LocaleManager {
     if (preferredLocaleLanguageCode != null) {
       return Locale(preferredLocaleLanguageCode);
     } else {
+      final deviceLocale = Platform.localeName;
+      for (final locale in AppLocalizations.supportedLocales) {
+        if (deviceLocale.split('_').first == locale.languageCode) {
+          return locale;
+        }
+      }
+
       return const Locale('en');
     }
   }
@@ -17,8 +27,13 @@ class LocaleManager {
   void setLocale(Locale? locale) {
     if (locale == null) return;
 
-    PreferencesManager().set(PreferenceKey.theme.key, locale.languageCode);
+    PreferencesManager().set(PreferenceKey.locale.key, locale.languageCode);
 
-    localeNotifier.value = locale;
+    ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
+      SnackBar(
+        content: Text(localizations.settings_language_restart),
+        behavior: SnackBarBehavior.floating,
+      ),
+    );
   }
 }

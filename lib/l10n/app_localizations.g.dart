@@ -139,6 +139,12 @@ abstract class AppLocalizations {
   /// **'Language'**
   String get settings_language;
 
+  /// No description provided for @settings_language_restart.
+  ///
+  /// In en, this message translates to:
+  /// **'Please restart the app for the changes to take effect.'**
+  String get settings_language_restart;
+
   /// No description provided for @settings_about.
   ///
   /// In en, this message translates to:

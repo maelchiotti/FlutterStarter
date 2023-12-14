@@ -7,6 +7,7 @@
   "settings_theme_light": "Light",
   "settings_theme_dark": "Dark",
   "settings_language": "Language",
+  "settings_language_restart": "Please restart the app for the changes to take effect.",
   "settings_about": "About",
   "settings_github": "GitHub",
   "settings_github_description": "Take a look at the source code",
