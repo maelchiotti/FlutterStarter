@@ -15,6 +15,7 @@ This package is opinionated. Therefore, main packages will not change (`go_route
 ## Roadmap
 
 - Add instructions on how to change the name of the app and other information
+- Improve dynamic theming (cf. MaterialNotes)
 
 ## Included
 
