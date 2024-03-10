@@ -22,7 +22,6 @@ class _BottomNavigationState extends State<BottomNavigation> {
     });
 
     context.go(RouterRoute.getRouteFromIndex(_index).path);
-    context.pop();
   }
 
   @override
