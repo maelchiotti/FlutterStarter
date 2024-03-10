@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:starter/common/routing/router_route.dart';
 import 'package:starter/utils/constants/constants.dart';
-import 'package:starter/utils/routes/router_route.dart';
 
 enum BottomNavigationDestination {
   home(
