@@ -21,12 +21,16 @@ final router = GoRouter(
       },
       routes: [
         GoRoute(
-          name: RouterRoute.home.name,
           path: RouterRoute.home.path,
           builder: (context, state) => const HomePage(),
+          routes: [
+            GoRoute(
+              path: RouterRoute.child.path,
+              builder: (context, state) => Container(),
+            ),
+          ],
         ),
         GoRoute(
-          name: RouterRoute.settings.name,
           path: RouterRoute.settings.path,
           builder: (context, state) => const SettingsPage(),
         ),

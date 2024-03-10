@@ -14,21 +14,15 @@ class BottomNavigation extends StatefulWidget {
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
-  int _selectedIndex = 0;
+  int _index = RouterRoute.currentDrawerIndex;
 
-  void _onDestinationSelected(int? index) {
-    if (index != null) {
-      setState(() {
-        _selectedIndex = index;
-      });
+  void _navigate(int newIndex) {
+    setState(() {
+      _index = newIndex;
+    });
 
-      switch (index) {
-        case 0:
-          context.goNamed(RouterRoute.home.name);
-        case 1:
-          context.goNamed(RouterRoute.settings.name);
-      }
-    }
+    context.go(RouterRoute.getRouteFromIndex(_index).path);
+    context.pop();
   }
 
   @override
@@ -43,8 +37,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 label: destination.label,
               );
             }).toList(),
-            selectedIndex: _selectedIndex,
-            onDestinationSelected: _onDestinationSelected,
+            selectedIndex: _index,
+            onDestinationSelected: _navigate,
           )
         : CupertinoTabBar(
             items: BottomNavigationDestination.values.map((destination) {
@@ -54,8 +48,8 @@ class _BottomNavigationState extends State<BottomNavigation> {
                 label: destination.label,
               );
             }).toList(),
-            currentIndex: _selectedIndex,
-            onTap: _onDestinationSelected,
+            currentIndex: _index,
+            onTap: _navigate,
           );
   }
 }
