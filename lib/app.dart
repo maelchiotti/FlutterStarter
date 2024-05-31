@@ -3,8 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:starter/common/routing/router.dart';
 import 'package:starter/l10n/app_localizations.g.dart';
 import 'package:starter/utils/constants/constants.dart';
-import 'package:starter/utils/package_info_manager.dart';
-import 'package:starter/utils/theme_manager.dart';
+import 'package:starter/utils/theme_utils.dart';
 
 class App extends StatelessWidget {
   @override
@@ -18,9 +17,9 @@ class App extends StatelessWidget {
               valueListenable: themeModeNotifier,
               builder: (context, themeMode, child) {
                 return MaterialApp.router(
-                  title: PackageInfoManager().name,
-                  theme: ThemeManager().getLightTheme(lightDynamic),
-                  darkTheme: ThemeManager().getDarkTheme(darkDynamic),
+                  title: 'Starter',
+                  theme: ThemeUtils().getLightTheme(lightDynamic),
+                  darkTheme: ThemeUtils().getDarkTheme(darkDynamic),
                   themeMode: themeMode,
                   localizationsDelegates: AppLocalizations.localizationsDelegates,
                   supportedLocales: AppLocalizations.supportedLocales,

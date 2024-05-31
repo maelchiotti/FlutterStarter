@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:starter/utils/package_info_manager.dart';
+import 'package:starter/utils/constants/constants.dart';
 
 class TopNavigation extends StatelessWidget implements PreferredSizeWidget {
   const TopNavigation();
@@ -8,7 +8,7 @@ class TopNavigation extends StatelessWidget implements PreferredSizeWidget {
   @override
   Widget build(BuildContext context) {
     return AppBar(
-      title: Text(PackageInfoManager().name),
+      title: Text(localizations.app_name),
       systemOverlayStyle: SystemUiOverlayStyle(
         systemNavigationBarColor: ElevationOverlay.applySurfaceTint(
           Theme.of(context).colorScheme.surface,

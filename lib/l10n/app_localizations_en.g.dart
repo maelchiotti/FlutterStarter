@@ -5,6 +5,9 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
+  String get app_name => 'Starter';
+
+  @override
   String get navigation_home => 'Home';
 
   @override
@@ -29,7 +32,8 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings_language => 'Language';
 
   @override
-  String get settings_language_restart => 'Please restart the app for the changes to take effect.';
+  String get settings_language_restart =>
+      'Please restart the app for the changes to take effect.';
 
   @override
   String get settings_about => 'About';

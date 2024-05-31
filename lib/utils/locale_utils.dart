@@ -4,11 +4,11 @@ import 'package:flutter/material.dart';
 import 'package:starter/l10n/app_localizations.g.dart';
 import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/preferences/preference_key.dart';
-import 'package:starter/utils/preferences/preferences_manager.dart';
+import 'package:starter/utils/preferences/preferences_utils.dart';
 
 class LocaleManager {
   Locale get locale {
-    final preferredLocaleLanguageCode = PreferencesManager().get<String>(PreferenceKey.locale);
+    final preferredLocaleLanguageCode = PreferencesUtils().get<String>(PreferenceKey.locale);
 
     if (preferredLocaleLanguageCode != null) {
       return Locale(preferredLocaleLanguageCode);
@@ -29,7 +29,7 @@ class LocaleManager {
       return;
     }
 
-    PreferencesManager().set(PreferenceKey.locale.key, locale.languageCode);
+    PreferencesUtils().set(PreferenceKey.locale.key, locale.languageCode);
 
     ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
       SnackBar(

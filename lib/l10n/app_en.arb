@@ -1,4 +1,5 @@
 {
+  "app_name": "Starter",
   "navigation_home": "Home",
   "navigation_settings": "Settings",
   "settings_appearance": "Appearance",

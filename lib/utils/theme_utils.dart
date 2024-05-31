@@ -2,9 +2,9 @@ import 'package:dynamic_color/dynamic_color.dart';
 import 'package:flutter/material.dart';
 import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/preferences/preference_key.dart';
-import 'package:starter/utils/preferences/preferences_manager.dart';
+import 'package:starter/utils/preferences/preferences_utils.dart';
 
-class ThemeManager {
+class ThemeUtils {
   final _defaultLight = ColorScheme.fromSeed(
     seedColor: Colors.teal,
   );
@@ -19,7 +19,7 @@ class ThemeManager {
   }
 
   ThemeMode get themeMode {
-    final themeModePreference = PreferencesManager().get<int>(PreferenceKey.theme);
+    final themeModePreference = PreferencesUtils().get<int>(PreferenceKey.theme);
 
     if (themeModePreference != null) {
       switch (themeModePreference) {
@@ -36,7 +36,7 @@ class ThemeManager {
   }
 
   String get themeModeName {
-    final themeModePreference = PreferencesManager().get<int>(PreferenceKey.theme);
+    final themeModePreference = PreferencesUtils().get<int>(PreferenceKey.theme);
 
     if (themeModePreference != null) {
       switch (themeModePreference) {
@@ -66,7 +66,7 @@ class ThemeManager {
       case ThemeMode.dark:
         value = 2;
     }
-    PreferencesManager().set<int>(PreferenceKey.theme.key, value);
+    PreferencesUtils().set<int>(PreferenceKey.theme.key, value);
 
     themeModeNotifier.value = themeMode;
   }

@@ -6,9 +6,9 @@ import 'package:simple_icons/simple_icons.dart';
 import 'package:starter/l10n/app_localizations.g.dart';
 import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/extensions/string_extensions.dart';
-import 'package:starter/utils/locale_manager.dart';
-import 'package:starter/utils/package_info_manager.dart';
-import 'package:starter/utils/theme_manager.dart';
+import 'package:starter/utils/info_utils.dart';
+import 'package:starter/utils/locale_utils.dart';
+import 'package:starter/utils/theme_utils.dart';
 import 'package:url_launcher/url_launcher_string.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -52,7 +52,7 @@ class _SettingsPageState extends State<SettingsPage> {
         );
       },
     ).then((themeMode) {
-      ThemeManager().setThemeMode(themeMode);
+      ThemeUtils().setThemeMode(themeMode);
       setState(() {});
     });
   }
@@ -103,7 +103,7 @@ class _SettingsPageState extends State<SettingsPage> {
             SettingsTile.navigation(
               leading: const Icon(Icons.palette),
               title: Text(localizations.settings_theme),
-              value: Text(ThemeManager().themeModeName),
+              value: Text(ThemeUtils().themeModeName),
               onPressed: _selectTheme,
             ),
             SettingsTile.navigation(
@@ -119,8 +119,8 @@ class _SettingsPageState extends State<SettingsPage> {
           tiles: [
             SettingsTile(
               leading: const Icon(Icons.info),
-              title: Text(PackageInfoManager().name),
-              value: Text(PackageInfoManager().version),
+              title: Text(localizations.app_name),
+              value: Text(InfoUtils().appVersion),
             ),
             SettingsTile(
               leading: const Icon(SimpleIcons.github),
