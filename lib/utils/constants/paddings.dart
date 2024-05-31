@@ -34,8 +34,6 @@ enum Paddings {
 
   EdgeInsetsDirectional get page => EdgeInsetsDirectional.all(Paddings.padding16._padding);
 
-  EdgeInsetsDirectional get drawer => EdgeInsetsDirectional.all(Paddings.padding8._padding);
-
   final double _padding;
 
   const Paddings(this._padding);
