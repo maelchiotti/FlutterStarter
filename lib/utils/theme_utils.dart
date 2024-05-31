@@ -100,26 +100,26 @@ class ThemeUtils {
 
       colorScheme = useBlackTheming
           ? darkDynamicColorScheme.copyWith(
-        // TODO: remove when dynamic_colors is updated to support new roles
-        // cf. https://github.com/material-foundation/flutter-packages/issues/582
-        background: Colors.black, // ignore: deprecated_member_use
-        surfaceContainerHighest: temporaryColorScheme.surfaceContainerHighest,
-        surface: Colors.black,
-      )
+              // TODO: remove when dynamic_colors is updated to support new roles
+              // cf. https://github.com/material-foundation/flutter-packages/issues/582
+              background: Colors.black, // ignore: deprecated_member_use
+              surfaceContainerHighest: temporaryColorScheme.surfaceContainerHighest,
+              surface: Colors.black,
+            )
           : darkDynamicColorScheme.copyWith(
-        surfaceContainerHighest: temporaryColorScheme.surfaceContainerHighest,
-      );
+              surfaceContainerHighest: temporaryColorScheme.surfaceContainerHighest,
+            );
     } else {
       colorScheme = useBlackTheming
           ? ColorScheme.fromSeed(
-        brightness: Brightness.dark,
-        seedColor: _customPrimaryColor,
-        surface: Colors.black,
-      )
+              brightness: Brightness.dark,
+              seedColor: _customPrimaryColor,
+              surface: Colors.black,
+            )
           : ColorScheme.fromSeed(
-        brightness: Brightness.dark,
-        seedColor: _customPrimaryColor,
-      );
+              brightness: Brightness.dark,
+              seedColor: _customPrimaryColor,
+            );
     }
 
     return ThemeData(

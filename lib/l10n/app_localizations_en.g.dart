@@ -8,8 +8,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get app_name => 'Starter';
 
   @override
-  String get app_tagline =>
-      'A ready-to-use Flutter project for Android and iOS';
+  String get app_tagline => 'A ready-to-use Flutter project for Android and iOS';
 
   @override
   String app_about(Object appName) {
@@ -44,15 +43,13 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings_dynamic_theming => 'Dynamic theming';
 
   @override
-  String get settings_dynamic_theming_description =>
-      'Generate colors from your system';
+  String get settings_dynamic_theming_description => 'Generate colors from your system';
 
   @override
   String get settings_black_theming => 'Black theming';
 
   @override
-  String get settings_black_theming_description =>
-      'Use a black background in dark mode';
+  String get settings_black_theming_description => 'Use a black background in dark mode';
 
   @override
   String get settings_about => 'About';
@@ -73,6 +70,5 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings_issue => 'Report a bug';
 
   @override
-  String get settings_issue_description =>
-      'Report a bug by creating an issue on GitHub';
+  String get settings_issue_description => 'Report a bug by creating an issue on GitHub';
 }

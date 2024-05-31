@@ -11,23 +11,23 @@ enum Separator {
   final double _endIndent;
 
   Divider get horizontal => Divider(
-    height: _size,
-    thickness: _thickness,
-    indent: _indent,
-    endIndent: _endIndent,
-  );
+        height: _size,
+        thickness: _thickness,
+        indent: _indent,
+        endIndent: _endIndent,
+      );
 
   VerticalDivider get vertical => VerticalDivider(
-    width: _size,
-    thickness: _thickness,
-    indent: _indent,
-    endIndent: _endIndent,
-  );
+        width: _size,
+        thickness: _thickness,
+        indent: _indent,
+        endIndent: _endIndent,
+      );
 
   const Separator(
-      this._size,
-      this._thickness,
-      this._indent,
-      this._endIndent,
-      );
+    this._size,
+    this._thickness,
+    this._indent,
+    this._endIndent,
+  );
 }
