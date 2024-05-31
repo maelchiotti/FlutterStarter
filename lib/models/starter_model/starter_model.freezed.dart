@@ -24,22 +24,19 @@ mixin _$StarterModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $StarterModelCopyWith<StarterModel> get copyWith =>
-      throw _privateConstructorUsedError;
+  $StarterModelCopyWith<StarterModel> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $StarterModelCopyWith<$Res> {
-  factory $StarterModelCopyWith(
-          StarterModel value, $Res Function(StarterModel) then) =
+  factory $StarterModelCopyWith(StarterModel value, $Res Function(StarterModel) then) =
       _$StarterModelCopyWithImpl<$Res, StarterModel>;
   @useResult
   $Res call({String label});
 }
 
 /// @nodoc
-class _$StarterModelCopyWithImpl<$Res, $Val extends StarterModel>
-    implements $StarterModelCopyWith<$Res> {
+class _$StarterModelCopyWithImpl<$Res, $Val extends StarterModel> implements $StarterModelCopyWith<$Res> {
   _$StarterModelCopyWithImpl(this._value, this._then);
 
   // ignore: unused_field
@@ -62,10 +59,8 @@ class _$StarterModelCopyWithImpl<$Res, $Val extends StarterModel>
 }
 
 /// @nodoc
-abstract class _$$StarterModelImplCopyWith<$Res>
-    implements $StarterModelCopyWith<$Res> {
-  factory _$$StarterModelImplCopyWith(
-          _$StarterModelImpl value, $Res Function(_$StarterModelImpl) then) =
+abstract class _$$StarterModelImplCopyWith<$Res> implements $StarterModelCopyWith<$Res> {
+  factory _$$StarterModelImplCopyWith(_$StarterModelImpl value, $Res Function(_$StarterModelImpl) then) =
       __$$StarterModelImplCopyWithImpl<$Res>;
   @override
   @useResult
@@ -73,11 +68,9 @@ abstract class _$$StarterModelImplCopyWith<$Res>
 }
 
 /// @nodoc
-class __$$StarterModelImplCopyWithImpl<$Res>
-    extends _$StarterModelCopyWithImpl<$Res, _$StarterModelImpl>
+class __$$StarterModelImplCopyWithImpl<$Res> extends _$StarterModelCopyWithImpl<$Res, _$StarterModelImpl>
     implements _$$StarterModelImplCopyWith<$Res> {
-  __$$StarterModelImplCopyWithImpl(
-      _$StarterModelImpl _value, $Res Function(_$StarterModelImpl) _then)
+  __$$StarterModelImplCopyWithImpl(_$StarterModelImpl _value, $Res Function(_$StarterModelImpl) _then)
       : super(_value, _then);
 
   @pragma('vm:prefer-inline')
@@ -99,8 +92,7 @@ class __$$StarterModelImplCopyWithImpl<$Res>
 class _$StarterModelImpl implements _StarterModel {
   const _$StarterModelImpl({required this.label});
 
-  factory _$StarterModelImpl.fromJson(Map<String, dynamic> json) =>
-      _$$StarterModelImplFromJson(json);
+  factory _$StarterModelImpl.fromJson(Map<String, dynamic> json) => _$$StarterModelImplFromJson(json);
 
   @override
   final String label;
@@ -137,16 +129,13 @@ class _$StarterModelImpl implements _StarterModel {
 }
 
 abstract class _StarterModel implements StarterModel {
-  const factory _StarterModel({required final String label}) =
-      _$StarterModelImpl;
+  const factory _StarterModel({required final String label}) = _$StarterModelImpl;
 
-  factory _StarterModel.fromJson(Map<String, dynamic> json) =
-      _$StarterModelImpl.fromJson;
+  factory _StarterModel.fromJson(Map<String, dynamic> json) = _$StarterModelImpl.fromJson;
 
   @override
   String get label;
   @override
   @JsonKey(ignore: true)
-  _$$StarterModelImplCopyWith<_$StarterModelImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$$StarterModelImplCopyWith<_$StarterModelImpl> get copyWith => throw _privateConstructorUsedError;
 }

@@ -13,7 +13,10 @@ class HomePage extends ConsumerWidget {
     return Center(
       child: Column(
         children: [
-          Image.asset(Asset.flutter.path, width: Sizes.size128.size,),
+          Image.asset(
+            Asset.flutter.path,
+            width: Sizes.size128.size,
+          ),
           Padding(padding: Paddings.padding16.vertical),
           Text(ref.watch(starterProvider).label),
         ],

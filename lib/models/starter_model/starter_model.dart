@@ -9,6 +9,5 @@ class StarterModel with _$StarterModel {
     required String label,
   }) = _StarterModel;
 
-  factory StarterModel.fromJson(Map<String, Object?> json)
-  => _$StarterModelFromJson(json);
+  factory StarterModel.fromJson(Map<String, Object?> json) => _$StarterModelFromJson(json);
 }

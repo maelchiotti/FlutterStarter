@@ -13,8 +13,7 @@ String _$starterHash() => r'bd4b9faefc4eacfe755766b22c3aadae1bb29c2a';
 final starterProvider = AutoDisposeProvider<StarterModel>.internal(
   starter,
   name: r'starterProvider',
-  debugGetCreateSourceHash:
-      const bool.fromEnvironment('dart.vm.product') ? null : _$starterHash,
+  debugGetCreateSourceHash: const bool.fromEnvironment('dart.vm.product') ? null : _$starterHash,
   dependencies: null,
   allTransitiveDependencies: null,
 );

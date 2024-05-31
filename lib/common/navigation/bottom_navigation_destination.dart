@@ -38,10 +38,10 @@ enum BottomNavigationDestination {
   }
 
   const BottomNavigationDestination(
-      this.androidIcon,
-      this.androidSelectedIcon,
-      this.iosIcon,
-      this.iosActiveIcon,
-      this.route,
-      );
+    this.androidIcon,
+    this.androidSelectedIcon,
+    this.iosIcon,
+    this.iosActiveIcon,
+    this.route,
+  );
 }
