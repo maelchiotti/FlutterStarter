@@ -25,7 +25,9 @@ class LocaleManager {
   }
 
   void setLocale(Locale? locale) {
-    if (locale == null) return;
+    if (locale == null) {
+      return;
+    }
 
     PreferencesManager().set(PreferenceKey.locale.key, locale.languageCode);
 
