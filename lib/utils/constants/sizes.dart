@@ -10,6 +10,7 @@ enum Sizes {
   size256(256),
   size512(512),
   size1024(1024),
+  size2048(2048),
   ;
 
   final double size;
