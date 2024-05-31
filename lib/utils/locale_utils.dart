@@ -6,7 +6,7 @@ import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/preferences/preference_key.dart';
 import 'package:starter/utils/preferences/preferences_utils.dart';
 
-class LocaleManager {
+class LocaleUtils {
   Locale get locale {
     final preferredLocaleLanguageCode = PreferencesUtils().get<String>(PreferenceKey.locale);
 
@@ -29,7 +29,7 @@ class LocaleManager {
       return;
     }
 
-    PreferencesUtils().set(PreferenceKey.locale.key, locale.languageCode);
+    PreferencesUtils().set(PreferenceKey.locale.name, locale.languageCode);
 
     ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
       SnackBar(

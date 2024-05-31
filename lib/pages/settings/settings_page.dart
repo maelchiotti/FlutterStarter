@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:locale_names/locale_names.dart';
+import 'package:restart_app/restart_app.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:simple_icons/simple_icons.dart';
 import 'package:starter/l10n/app_localizations.g.dart';
@@ -74,8 +75,13 @@ class _SettingsPageState extends State<SettingsPage> {
           }).toList(),
         );
       },
-    ).then((locale) {
-      LocaleManager().setLocale(locale);
+    ).then((locale) async {
+      if (locale == null) {
+        return;
+      }
+
+      LocaleUtils().setLocale(locale);
+      await Restart.restartApp();
     });
   }
 

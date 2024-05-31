@@ -34,11 +34,11 @@ class PreferencesUtils {
     }
   }
 
-  T? get<T>(PreferenceKey key) {
+  T? get<T>(PreferenceKey preferenceKey) {
     if (T == dynamic) {
       throw ArgumentError('The type T is required.');
     }
 
-    return _preferences.get(key.name) as T?;
+    return _preferences.get(preferenceKey.name) as T?;
   }
 }
