@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import 'package:locale_names/locale_names.dart';
-import 'package:restart_app/restart_app.dart';
 import 'package:settings_ui/settings_ui.dart';
-import 'package:simple_icons/simple_icons.dart';
-import 'package:starter/l10n/app_localizations.g.dart';
+import 'package:starter/pages/settings/settings_actions.dart';
 import 'package:starter/utils/constants/constants.dart';
-import 'package:starter/utils/extensions/string_extensions.dart';
-import 'package:starter/utils/info_utils.dart';
-import 'package:starter/utils/locale_utils.dart';
+import 'package:starter/utils/constants/paddings.dart';
+import 'package:starter/utils/extensions/string_extension.dart';
 import 'package:starter/utils/theme_utils.dart';
-import 'package:url_launcher/url_launcher_string.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage();
@@ -20,125 +15,56 @@ class SettingsPage extends StatefulWidget {
 }
 
 class _SettingsPageState extends State<SettingsPage> {
-  void _selectTheme(BuildContext context) {
-    showAdaptiveDialog<ThemeMode>(
-      context: context,
-      builder: (context) {
-        return SimpleDialog(
-          clipBehavior: Clip.hardEdge,
-          title: Text(localizations.settings_theme),
-          children: [
-            ListTile(
-              leading: const Icon(Icons.smartphone),
-              title: Text(localizations.settings_theme_system),
-              onTap: () {
-                context.pop(ThemeMode.system);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.light_mode),
-              title: Text(localizations.settings_theme_light),
-              onTap: () {
-                context.pop(ThemeMode.light);
-              },
-            ),
-            ListTile(
-              leading: const Icon(Icons.dark_mode),
-              title: Text(localizations.settings_theme_dark),
-              onTap: () {
-                context.pop(ThemeMode.dark);
-              },
-            ),
-          ],
-        );
-      },
-    ).then((themeMode) {
-      ThemeUtils().setThemeMode(themeMode);
-      setState(() {});
-    });
-  }
-
-  void _selectLanguage(BuildContext context) {
-    showAdaptiveDialog<Locale>(
-      context: context,
-      builder: (context) {
-        return SimpleDialog(
-          clipBehavior: Clip.hardEdge,
-          title: Text(localizations.settings_language),
-          children: AppLocalizations.supportedLocales.map((locale) {
-            return ListTile(
-              title: Text(locale.nativeDisplayLanguage.capitalized),
-              onTap: () {
-                context.pop(locale);
-              },
-            );
-          }).toList(),
-        );
-      },
-    ).then((locale) async {
-      if (locale == null) {
-        return;
-      }
-
-      LocaleUtils().setLocale(locale);
-      await Restart.restartApp();
-    });
-  }
-
-  void _openGitHub(_) {
-    launchUrlString('https://github.com/maelchiotti/flutter_starter');
-  }
-
-  void _openLicense(_) {
-    launchUrlString('https://github.com/maelchiotti/flutter_starter/blob/main/LICENSE');
-  }
+  final interactions = SettingsActions();
 
   @override
   Widget build(BuildContext context) {
     return SettingsList(
+      platform: DevicePlatform.android,
+      contentPadding: Paddings.custom.bottomSystemUi,
       lightTheme: SettingsThemeData(
-        settingsListBackground: Theme.of(context).colorScheme.background,
+        settingsListBackground: Theme.of(context).colorScheme.surface,
       ),
       darkTheme: SettingsThemeData(
-        settingsListBackground: Theme.of(context).colorScheme.background,
+        settingsListBackground: Theme.of(context).colorScheme.surface,
       ),
       sections: [
         SettingsSection(
           title: Text(localizations.settings_appearance),
           tiles: [
             SettingsTile.navigation(
-              leading: const Icon(Icons.palette),
-              title: Text(localizations.settings_theme),
-              value: Text(ThemeUtils().themeModeName),
-              onPressed: _selectTheme,
-            ),
-            SettingsTile.navigation(
               leading: const Icon(Icons.language),
               title: Text(localizations.settings_language),
               value: Text(Localizations.localeOf(context).nativeDisplayLanguage.capitalized),
-              onPressed: _selectLanguage,
+              onPressed: interactions.selectLanguage,
             ),
-          ],
-        ),
-        SettingsSection(
-          title: Text(localizations.settings_about),
-          tiles: [
-            SettingsTile(
-              leading: const Icon(Icons.info),
-              title: Text(localizations.app_name),
-              value: Text(InfoUtils().appVersion),
+            SettingsTile.navigation(
+              leading: const Icon(Icons.palette),
+              title: Text(localizations.settings_theme),
+              value: Text(ThemeUtils().themeModeName),
+              onPressed: (context) async {
+                await interactions.selectTheme(context);
+                setState(() {});
+              },
             ),
-            SettingsTile(
-              leading: const Icon(SimpleIcons.github),
-              title: Text(localizations.settings_github),
-              value: Text(localizations.settings_github_description),
-              onPressed: _openGitHub,
+            SettingsTile.switchTile(
+              enabled: ThemeUtils().isDynamicThemingAvailable,
+              leading: const Icon(Icons.bolt),
+              title: Text(localizations.settings_dynamic_theming),
+              description: Text(localizations.settings_dynamic_theming_description),
+              initialValue: ThemeUtils().useDynamicTheming,
+              onToggle: interactions.toggleDynamicTheming,
             ),
-            SettingsTile(
-              leading: const Icon(Icons.balance),
-              title: Text(localizations.settings_licence),
-              value: Text(localizations.settings_licence_description),
-              onPressed: _openLicense,
+            SettingsTile.switchTile(
+              enabled: ThemeUtils().brightness == Brightness.dark,
+              leading: const Icon(Icons.nightlight),
+              title: Text(localizations.settings_black_theming),
+              description: Text(localizations.settings_black_theming_description),
+              initialValue: ThemeUtils().useBlackTheming,
+              onToggle: (toggled) {
+                interactions.toggleBlackTheming(toggled);
+                setState(() {});
+              },
             ),
           ],
         ),

@@ -8,6 +8,15 @@ class AppLocalizationsEn extends AppLocalizations {
   String get app_name => 'Starter';
 
   @override
+  String get app_tagline =>
+      'A ready-to-use Flutter project for Android and iOS';
+
+  @override
+  String app_about(Object appName) {
+    return '$appName is a ready-to-use Flutter project for Android and iOS.';
+  }
+
+  @override
   String get navigation_home => 'Home';
 
   @override
@@ -15,6 +24,9 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get settings_appearance => 'Appearance';
+
+  @override
+  String get settings_language => 'Language';
 
   @override
   String get settings_theme => 'Theme';
@@ -29,11 +41,18 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings_theme_dark => 'Dark';
 
   @override
-  String get settings_language => 'Language';
+  String get settings_dynamic_theming => 'Dynamic theming';
 
   @override
-  String get settings_language_restart =>
-      'Please restart the app for the changes to take effect.';
+  String get settings_dynamic_theming_description =>
+      'Generate colors from your system';
+
+  @override
+  String get settings_black_theming => 'Black theming';
+
+  @override
+  String get settings_black_theming_description =>
+      'Use a black background in dark mode';
 
   @override
   String get settings_about => 'About';
@@ -48,5 +67,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settings_licence => 'License';
 
   @override
-  String get settings_licence_description => 'MIT';
+  String get settings_licence_description => 'AGPL-3.0';
+
+  @override
+  String get settings_issue => 'Report a bug';
+
+  @override
+  String get settings_issue_description =>
+      'Report a bug by creating an issue on GitHub';
 }

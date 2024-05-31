@@ -2,7 +2,6 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:starter/l10n/app_localizations.g.dart';
-import 'package:starter/utils/constants/constants.dart';
 import 'package:starter/utils/preferences/preference_key.dart';
 import 'package:starter/utils/preferences/preferences_utils.dart';
 
@@ -30,12 +29,5 @@ class LocaleUtils {
     }
 
     PreferencesUtils().set(PreferenceKey.locale.name, locale.languageCode);
-
-    ScaffoldMessenger.of(navigatorKey.currentContext!).showSnackBar(
-      SnackBar(
-        content: Text(localizations.settings_language_restart),
-        behavior: SnackBarBehavior.floating,
-      ),
-    );
   }
 }

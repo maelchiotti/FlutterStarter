@@ -98,6 +98,18 @@ abstract class AppLocalizations {
   /// **'Starter'**
   String get app_name;
 
+  /// No description provided for @app_tagline.
+  ///
+  /// In en, this message translates to:
+  /// **'A ready-to-use Flutter project for Android and iOS'**
+  String get app_tagline;
+
+  /// No description provided for @app_about.
+  ///
+  /// In en, this message translates to:
+  /// **'{appName} is a ready-to-use Flutter project for Android and iOS.'**
+  String app_about(Object appName);
+
   /// No description provided for @navigation_home.
   ///
   /// In en, this message translates to:
@@ -115,6 +127,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Appearance'**
   String get settings_appearance;
+
+  /// No description provided for @settings_language.
+  ///
+  /// In en, this message translates to:
+  /// **'Language'**
+  String get settings_language;
 
   /// No description provided for @settings_theme.
   ///
@@ -140,17 +158,29 @@ abstract class AppLocalizations {
   /// **'Dark'**
   String get settings_theme_dark;
 
-  /// No description provided for @settings_language.
+  /// No description provided for @settings_dynamic_theming.
   ///
   /// In en, this message translates to:
-  /// **'Language'**
-  String get settings_language;
+  /// **'Dynamic theming'**
+  String get settings_dynamic_theming;
 
-  /// No description provided for @settings_language_restart.
+  /// No description provided for @settings_dynamic_theming_description.
   ///
   /// In en, this message translates to:
-  /// **'Please restart the app for the changes to take effect.'**
-  String get settings_language_restart;
+  /// **'Generate colors from your system'**
+  String get settings_dynamic_theming_description;
+
+  /// No description provided for @settings_black_theming.
+  ///
+  /// In en, this message translates to:
+  /// **'Black theming'**
+  String get settings_black_theming;
+
+  /// No description provided for @settings_black_theming_description.
+  ///
+  /// In en, this message translates to:
+  /// **'Use a black background in dark mode'**
+  String get settings_black_theming_description;
 
   /// No description provided for @settings_about.
   ///
@@ -179,8 +209,20 @@ abstract class AppLocalizations {
   /// No description provided for @settings_licence_description.
   ///
   /// In en, this message translates to:
-  /// **'MIT'**
+  /// **'AGPL-3.0'**
   String get settings_licence_description;
+
+  /// No description provided for @settings_issue.
+  ///
+  /// In en, this message translates to:
+  /// **'Report a bug'**
+  String get settings_issue;
+
+  /// No description provided for @settings_issue_description.
+  ///
+  /// In en, this message translates to:
+  /// **'Report a bug by creating an issue on GitHub'**
+  String get settings_issue_description;
 }
 
 class _AppLocalizationsDelegate

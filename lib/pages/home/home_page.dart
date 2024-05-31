@@ -14,7 +14,7 @@ class HomePage extends ConsumerWidget {
       child: Column(
         children: [
           Image.asset(
-            Asset.flutter.path,
+            Asset.icon.path,
             width: Sizes.size128.size,
           ),
           Padding(padding: Paddings.padding16.vertical),

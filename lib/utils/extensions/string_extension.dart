@@ -1,6 +1,6 @@
 import 'package:intl/intl.dart';
 
-extension StringExtensions on String {
+extension StringExtension on String {
   String get capitalized {
     return toBeginningOfSentenceCase(this) ?? this;
   }
