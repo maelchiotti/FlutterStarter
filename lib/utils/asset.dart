@@ -1,5 +1,5 @@
 enum Asset {
-  flutter('logos/flutter_logo.png'),
+  flutter('icons/icon.png'),
   ;
 
   final _basePath = 'assets';
